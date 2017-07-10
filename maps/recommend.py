@@ -85,9 +85,7 @@ def k_means(restaurants, k, max_updates=100):
         old_centroids = centroids
         # BEGIN Question 6
         grouped = group_by_centroid(restaurants, old_centroids)
-        centroids = []
-        for cluster in grouped:
-            centroids.append(find_centroid(cluster))
+        centroids = [find_centroid(cluster) for cluster in grouped]
         # END Question 6
         n += 1
     return centroids
