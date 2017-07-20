@@ -70,6 +70,8 @@ def find_centroid(cluster):
     for restaurant in cluster:
         lst1.append(restaurant_location(restaurant)[0])
         lst2.append(restaurant_location(restaurant)[1])
+        #latitudes = [restaurant[0] for restaurant in cluster]
+        #longitudes = [restaurant[1] for restaurant in cluster]
     return [mean(lst1), mean(lst2)]
     # END Question 5
 
